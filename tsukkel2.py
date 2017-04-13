@@ -64,15 +64,24 @@ def xmliks(snr, rida):
 ##        except IndexError:
 ##            pass
 
-while b:
-    a=b.pop(0)
-    if "<w:t>#NBH#</w:t>" in a:
+eelmine=False
+ms=""
+
+c=b[:20]
+while c:
+    a=c.pop(0)
+#    if not a:
+#        a=c.pop(0)
+#        print(a)
+    if 'w:val="ms1"' in a:
         eelmine = True
-    if a.startswith('<w:rStyle w:val="ms'):
-        if eelmine:
-            ms=ms+a
-        ms = a
-        print(a)
+        ms1=a
+            
+    if a.startswith('<w:rStyle w:val="ms2'):
+        ms=ms1+a
+            
+        eelmine=False
+        print(ms)
         
 #tree = ET.ElementTree(snr)
 #tree.write("ms.xml", encoding='utf8')
