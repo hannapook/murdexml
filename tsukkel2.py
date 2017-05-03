@@ -3,10 +3,12 @@ snr=ET.Element("sr")
 
 f = open('08.xml.eelex.txt', 'r', encoding='utf8')
 a=f.readlines()
-b=[i.strip() for i in a]
+b=[i.strip() for i in a][:50]
 
-def xmliks(snr, rida):
-      
+
+
+def xmliks(snr, rida, sisutekst):
+
     ms_rida=b[rida+1]
     if ms_rida.startswith('<w:rStyle w:val="ms1"'):
         i1=ms_rida.find('<w:t>')
@@ -47,21 +49,31 @@ def xmliks(snr, rida):
             mvt.text=ms_viide
 
 #atribuutide lisamine märksõna elemendile
-        if rida2.startswith('<w:rStyle w:val="ms3"'):
+        elif rida2.startswith('<w:rStyle w:val="ms3"'):
             i1=rida2.find('<w:t>')
             i2=rida2.find('</w:t>')
-            marksona.attrib['x:i']=rida2[i1+5:i2]
-            marksona.attrib['x:O']=marksona.text+rida2[i1+5:i2]
+            marksona.attrib['x:i']=rida2[i1+5:i2].strip()
+            marksona.attrib['x:O']=marksona.text+rida2[i1+5:i2].strip()
 
+        else:
+            i=rida
+            while b: 
+               sisutekst=sisutekst+b[i]
+               print(sisutekst)
+               i=i+1
+           
 
+        sisu = ET.SubElement(artikkel, "x:S")
+        sisu.text=sisutekst
                 
 
-    return snr
+    return snr, sisutekst
 
+sisutekst=""
 for j,i in enumerate(b):
-    if not i:
+    if not i:       
         try:
-            snr=xmliks(snr, j)
+            snr, sisutekst=xmliks(snr, j, sisutekst)          
         except IndexError:
             pass
 
