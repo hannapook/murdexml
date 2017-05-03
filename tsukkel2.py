@@ -1,12 +1,12 @@
 import xml.etree.ElementTree as ET
 snr=ET.Element("sr")
 
-
 f = open('08.xml.eelex.txt', 'r', encoding='utf8')
 a=f.readlines()
 b=[i.strip() for i in a]
 
 def xmliks(snr, rida):
+      
     ms_rida=b[rida+1]
     if ms_rida.startswith('<w:rStyle w:val="ms1"'):
         i1=ms_rida.find('<w:t>')
@@ -18,11 +18,8 @@ def xmliks(snr, rida):
             ms_grupp = ET.SubElement(pais, "x:mg")
             marksona = ET.SubElement(ms_grupp, "x:m")
             marksona.text=marksona_ise
-    #if 'Vrd' in ms_rida:
-      #kustuta sellele eelnev tühi rida ära
 
 #tahaks siin teha tsükli, et ei peaks iga kord uut rida uuesti defineerima
-
 #liitsõna-märksõnade lisamine (kui ühes artiklis on mitu liitsõna, siis hetkel lisab ainult esimese)
         rida2=b[rida+2]
         i1=rida2.find('<w:t>')
@@ -30,6 +27,13 @@ def xmliks(snr, rida):
         teine_rida=rida2[i1+5:i2]
         if teine_rida.startswith('|'):
             marksona.text=marksona_ise+teine_rida
+
+        rida3=b[rida+3]
+        i1=rida3.find('<w:t>')
+        i2=rida3.find('</w:t>')
+        kolmas_rida=rida3[i1+5:i2]
+        if rida3.startswith('<w:rStyle w:val="ms'):
+            marksona.text=marksona.text+kolmas_rida
 
 #märksõnaviite xmli paigutamine
 #töötab hetkel ainult siis, kui märksõna pole liitsõna
@@ -48,43 +52,37 @@ def xmliks(snr, rida):
             i2=rida2.find('</w:t>')
             marksona.attrib['x:i']=rida2[i1+5:i2]
             marksona.attrib['x:O']=marksona.text+rida2[i1+5:i2]
-            
-        rida3=b[rida+3]
-        i1=rida3.find('<w:t>')
-        i2=rida3.find('</w:t>')
-        kolmas_rida=rida3[i1+5:i2]
-        if rida3.startswith('<w:rStyle w:val="ms'):
-            marksona.text=marksona.text+kolmas_rida
+
+
+                
+
     return snr
 
-##for j,i in enumerate(b):
-##    if not i:
-##        try:
-##            snr=xmliks(snr, j)
-##        except IndexError:
-##            pass
+for j,i in enumerate(b):
+    if not i:
+        try:
+            snr=xmliks(snr, j)
+        except IndexError:
+            pass
 
-eelmine=False
-ms=""
-
-c=b[:20]
-while c:
-    a=c.pop(0)
-#    if not a:
-#        a=c.pop(0)
-#        print(a)
-    if 'w:val="ms1"' in a:
-        eelmine = True
-        ms1=a
-            
-    if a.startswith('<w:rStyle w:val="ms2'):
-        ms=ms1+a
-            
-        eelmine=False
-        print(ms)
+##eelmine=False
+##ms=""
+##
+##c=b[:100]
+##while c:
+##    a=c.pop(0)
+##    if 'w:val="ms1"' in a:
+##        eelmine = True
+##        ms1=a
+##        if a.startswith('<w:rStyle w:val="ms2') and eelmine==True:
+##            ms=ms1+a
+##        else:
+##            ms=ms1
+##        eelmine=False
+##        print(ms)
         
-#tree = ET.ElementTree(snr)
-#tree.write("ms.xml", encoding='utf8')
+tree = ET.ElementTree(snr)
+tree.write("ms.xml", encoding='utf8')
 
 
     
