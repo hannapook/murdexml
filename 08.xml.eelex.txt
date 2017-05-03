@@ -1,4 +1,5 @@
 <w:rStyle w:val="ms1"/><TIMES>	<w:fldChar w:fldCharType="begin"/><w:instrText>  </w:instrText><w:fldChar w:fldCharType="end"/>
+
 <w:rStyle w:val="ms1"/>	<w:t>kabja</w:t>
 <w:b/><w:sz w:val="20"/>	<w:t>|</w:t>
 <w:rStyle w:val="ms2"/>	<w:t>lagin</w:t>
@@ -40,7 +41,8 @@
 <w:rStyle w:val="ms1"/>	<w:t>kabja</w:t>
 <w:b/><w:sz w:val="20"/>	<w:t>|</w:t>
 <w:rStyle w:val="ms2"/>	<w:t>puu</w:t>
-<w:b/><w:sz w:val="20"/>	<w:t> 1.</w:t>
+
+<w:b/><w:sz w:val="20"/>	<w:t>1.</w:t>
 <w:sz w:val="20"/>	<w:t> murispuu </w:t>
 <w:i/><w:sz w:val="20"/>	<w:t>unga kabjabu</w:t>
 <w:sz w:val="20"/>	<w:t> Muh; </w:t>
