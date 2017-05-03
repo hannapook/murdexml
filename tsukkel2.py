@@ -3,13 +3,29 @@ snr=ET.Element("sr")
 
 f = open('08.xml.eelex.txt', 'r', encoding='utf8')
 a=f.readlines()
-b=[i.strip() for i in a][:50]
+b=[i.strip() for i in a]
+
+def listiks(alglist):
+    c=[]
+    for i,j in enumerate(alglist):
+        if not j:
+            try:
+                if "<w:t>2.</w:t>" in alglist[i+1]: #regulaaravaldised, find
+                    pass
+                else:
+                    c.append("¤")
+            except IndexError:
+                pass        
+        else:
+            c.append(j)
+    return c
+
+d=listiks(b)
 
 
-
-def xmliks(snr, rida, sisutekst):
-
-    ms_rida=b[rida+1]
+def xmliks(snr, rida):
+    sisutekst=""
+    ms_rida=d[rida+1]
     if ms_rida.startswith('<w:rStyle w:val="ms1"'):
         i1=ms_rida.find('<w:t>')
         i2=ms_rida.find('</w:t>')
@@ -23,14 +39,14 @@ def xmliks(snr, rida, sisutekst):
 
 #tahaks siin teha tsükli, et ei peaks iga kord uut rida uuesti defineerima
 #liitsõna-märksõnade lisamine (kui ühes artiklis on mitu liitsõna, siis hetkel lisab ainult esimese)
-        rida2=b[rida+2]
+        rida2=d[rida+2]
         i1=rida2.find('<w:t>')
         i2=rida2.find('</w:t>')
         teine_rida=rida2[i1+5:i2]
         if teine_rida.startswith('|'):
             marksona.text=marksona_ise+teine_rida
 
-        rida3=b[rida+3]
+        rida3=d[rida+3]
         i1=rida3.find('<w:t>')
         i2=rida3.find('</w:t>')
         kolmas_rida=rida3[i1+5:i2]
@@ -56,24 +72,24 @@ def xmliks(snr, rida, sisutekst):
             marksona.attrib['x:O']=marksona.text+rida2[i1+5:i2].strip()
 
         else:
-            i=rida
-            while b: 
+            
+            i=rida+2
+            while d: 
                sisutekst=sisutekst+b[i]
-               print(sisutekst)
+               #print(sisutekst)
                i=i+1
-           
 
-        sisu = ET.SubElement(artikkel, "x:S")
-        sisu.text=sisutekst
-                
+            #sisu = ET.SubElement(artikkel, "x:S")
+            #sisu.text=sisutekst
+            #sisutekst=""   
 
-    return snr, sisutekst
+    return snr
 
-sisutekst=""
-for j,i in enumerate(b):
-    if not i:       
+
+for j,i in enumerate(d):
+    if i.startswith("¤"):       
         try:
-            snr, sisutekst=xmliks(snr, j, sisutekst)          
+            snr=xmliks(snr, j)          
         except IndexError:
             pass
 
