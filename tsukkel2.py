@@ -10,7 +10,7 @@ def listiks(alglist):
     for i,j in enumerate(alglist):
         if not j:
             try:
-                if "<w:t>2.</w:t>" in alglist[i+1]: #regulaaravaldised, find
+                if "<w:t>1.</w:t>" in alglist[i+1]: #regulaaravaldised, find
                     pass
                 else:
                     c.append("¤")
@@ -21,6 +21,9 @@ def listiks(alglist):
     return c
 
 d=listiks(b)
+
+#for i in d[100:135]:
+#    print(i)
 
 
 def xmliks(snr, rida):
@@ -74,14 +77,14 @@ def xmliks(snr, rida):
         else:
             
             i=rida+2
-            while d: 
-               sisutekst=sisutekst+b[i]
+            while not d[i].startswith("¤"): 
+               sisutekst=sisutekst+d[i]
                #print(sisutekst)
                i=i+1
 
-            #sisu = ET.SubElement(artikkel, "x:S")
-            #sisu.text=sisutekst
-            #sisutekst=""   
+            sisu = ET.SubElement(artikkel, "x:S")
+            sisu.text=sisutekst
+            sisutekst=""   
 
     return snr
 
