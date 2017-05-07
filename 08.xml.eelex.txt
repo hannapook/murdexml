@@ -894,7 +894,6 @@
 <w:b/><w:sz w:val="20"/>	<w:t>Vrd</w:t>
 <w:sz w:val="20"/>	<w:t> kabukukk</w:t>
 
-<w:sz w:val="20"/>	<w:t> </w:t>
 <w:b/><w:sz w:val="20"/>	<w:t>2. </w:t>
 <w:sz w:val="16"/>	<w:t>fig</w:t>
 <w:sz w:val="20"/>	<w:t> tühjaks, paljaks, lagedaks</w:t>
@@ -1966,7 +1965,7 @@
 <w:b/><w:sz w:val="20"/>	<w:t>Vrd</w:t>
 <w:sz w:val="20"/>	<w:t> kadakaseen</w:t>
 
-<w:b/>	<w:t>kadaku- </w:t>
+<w:b/><w:sz w:val="20"/>	<w:t>kadaku- </w:t>
 	<w:t>kadaka-</w:t>
 <w:i/>	<w:t> kadagu rasu</w:t>
 	<w:t>, </w:t>
@@ -1989,7 +1988,7 @@
 <w:i/>	<w:t>Ei saa üttegi asja kõnelde selle naiseg, pistäb kõrbume ku kadaku põõsas </w:t>
 	<w:t>Pst </w:t>
 
-<w:b/>	<w:t>kadagune</w:t>
+<w:b/><w:sz w:val="20"/>	<w:t>kadagune</w:t>
 	<w:t> </w:t><w:t>→</w:t><w:t> kadakune</w:t>
 
 <w:b/><w:sz w:val="20"/>	<w:t>kadal</w:t>
@@ -4137,8 +4136,7 @@
 <w:vertAlign w:val="superscript"/>	<w:t>2</w:t>
 	<w:t>, kadunema</w:t>
 
-<w:b/>	<w:t>*</w:t>
-<w:rStyle w:val="ms1"/>	<w:t>kaduma</w:t>
+<w:rStyle w:val="ms1"/>	<w:t>*kaduma</w:t>
 <w:rStyle w:val="ms3"/>	<w:t>2</w:t>
 <w:b/>	<w:t> </w:t>
 	<w:t>tr </w:t>
@@ -12298,7 +12296,7 @@
 <w:i/><w:sz w:val="20"/>	<w:t>Täna on juba kahes`kümnes</w:t>
 <w:sz w:val="20"/>	<w:t> Pöi</w:t>
 
-<w:i/><w:sz w:val="20"/>	<w:t>kahesmas</w:t>
+<w:b/><w:sz w:val="20"/>	<w:t>kahesmas</w:t>
 <w:sz w:val="20"/>	<w:t> </w:t><w:t>→</w:t><w:t> kahessamas</w:t>
 
 <w:rStyle w:val="ms1"/>	<w:t>kahesmegeisi</w:t>
@@ -13007,7 +13005,6 @@
 <w:i/><w:sz w:val="20"/>	<w:t>süü</w:t><w:t>˽</w:t><w:t>`kahja, maidsa</w:t><w:t>˽</w:t><w:t>`kahja</w:t>
 <w:sz w:val="20"/>	<w:t> Urv </w:t>
 
-<w:sz w:val="20"/>	<w:t> </w:t>
 <w:b/><w:sz w:val="20"/>	<w:t>2.</w:t>
 <w:sz w:val="20"/>	<w:t> kahetsus; loba </w:t>
 <w:i/><w:sz w:val="20"/>	<w:t>naesed pidasid kattise kausi juures viil ulk aega kahja</w:t>
@@ -17132,7 +17129,6 @@
 <w:i/><w:sz w:val="20"/>	<w:t>`kahvtlik</w:t>
 <w:sz w:val="20"/>	<w:t>) Se</w:t>
 
-<w:sz w:val="20"/>	<w:t> </w:t>
 <w:b/><w:sz w:val="20"/>	<w:t>1.</w:t>
 <w:sz w:val="20"/>	<w:t> kahtlane, mitteusaldatav </w:t>
 <w:i/><w:sz w:val="20"/>	<w:t>`kahtlik asi, kas ta võtapegi tedä naesess</w:t>
@@ -28802,7 +28798,6 @@
 <w:b/><w:sz w:val="20"/>	<w:t>Vrd </w:t>
 <w:sz w:val="20"/>	<w:t>kalõvane</w:t>
 
-<w:i/><w:sz w:val="20"/>	<w:t> </w:t>
 <w:b/><w:sz w:val="20"/>	<w:t>kalevi|tutt</w:t>
 <w:sz w:val="20"/>	<w:t> sootaim, villpea – SaLä Kaa Pöi </w:t>
 <w:i/><w:sz w:val="20"/>	<w:t>kalevi tutid kasuvad keeva maa p</w:t><w:t>εε</w:t><w:t>l</w:t>
@@ -29467,7 +29462,7 @@
 <w:i/><w:sz w:val="20"/>	<w:t>ka</w:t><w:t>ĺ</w:t><w:t>lin sääne suur `puukõnõ kasuss, mi kutsum o</w:t><w:t>ŕ</w:t><w:t>äpuu, vinnõ `värki ka</w:t><w:t>ĺ</w:t><w:t>lin</w:t>
 <w:sz w:val="20"/>	<w:t> Lut</w:t>
 
-<w:i/>	<w:t>kalindre- </w:t>
+<w:i/><w:sz w:val="20"/>	<w:t>kalindre- </w:t>
 	<w:t>→</w:t><w:t> kaling</w:t>
 
 <w:rStyle w:val="ms1"/>	<w:t>kaling</w:t>
@@ -34844,7 +34839,6 @@
 <w:i/><w:sz w:val="20"/>	<w:t>#NBH#mma</w:t>
 <w:sz w:val="20"/>	<w:t> Plv Vas </w:t>
 
-<w:sz w:val="20"/>	<w:t> </w:t>
 <w:b/><w:sz w:val="20"/>	<w:t>1. </w:t>
 <w:sz w:val="20"/>	<w:t>kuivaks muutuma; selginema (ilmast) </w:t>
 <w:i/><w:sz w:val="20"/>	<w:t>pilve</w:t><w:t>˽</w:t><w:t>kalõstusõ</w:t><w:t>ʔ</w:t><w:t> är</w:t><w:t>ʔ</w:t><w:t>, ega sadama ei nakka</w:t><w:t>ʔ</w:t>
@@ -37309,8 +37303,7 @@
 <w:rStyle w:val="ms1"/>	<w:t>kampoolum</w:t>
 	<w:t> </w:t><w:t>→</w:t><w:t> kampol </w:t>
 
-<w:b/>	<w:t>*</w:t>
-<w:rStyle w:val="ms1"/>	<w:t>kampreht</w:t>
+<w:rStyle w:val="ms1"/>	<w:t>*kampreht</w:t>
 	<w:t> </w:t>
 <w:i/>	<w:t>aab tuhat `nelja obuse `selgas, siis `öötse et, küll see `kamprehi ao aab</w:t>
 	<w:t> Muh </w:t>
@@ -37803,8 +37796,7 @@
 <w:b/>	<w:t>Vrd</w:t>
 	<w:t> kahmakul, kahmul, kamakul, kammukal, kammukil, kamukul</w:t>
 
-<w:b/>	<w:t>*</w:t>
-<w:rStyle w:val="ms1"/>	<w:t>kamuma</w:t>
+<w:rStyle w:val="ms1"/>	<w:t>*kamuma</w:t>
 	<w:t> hakkama </w:t>
 <w:i/>	<w:t>kamu menemäie, älä pali `aiga `viedä. kamun menemä</w:t>
 <w:b/>	<w:t> Lüg</w:t>
@@ -38474,7 +38466,6 @@
 	<w:t> tükk, kamakas</w:t>
 <w:i/>	<w:t> `Vi</w:t><w:t>ŕ</w:t><w:t>tin o</w:t><w:t>ĺ</w:t><w:t>l imäle `andnu</w:t><w:t>ʔ</w:t><w:t> mitu hääd ka</w:t><w:t>ń</w:t><w:t>akut </w:t>
 	<w:t>[põdraliha] Urv;</w:t>
-
 <w:i/>	<w:t>nu</w:t><w:t>‿</w:t><w:t>m `võtnu</w:t><w:t>˽</w:t><w:t>jäl</w:t><w:t>ʔ</w:t><w:t> uma ka</w:t><w:t>ń</w:t><w:t>agu </w:t>
 	<w:t>[leiba] Rõu</w:t>
 
@@ -40089,8 +40080,7 @@
 <w:b/>	<w:t>Vrd</w:t>
 	<w:t> kanasellan</w:t>
 
-<w:b/>	<w:t>2</w:t>
-<w:b/><w:i/>	<w:t>.</w:t>
+<w:b/>	<w:t>2.</w:t>
 	<w:t> kananahal</w:t>
 <w:i/>	<w:t> </w:t>
 	<w:t>[ihu] </w:t>
@@ -40126,8 +40116,7 @@
 <w:i/>	<w:t>heidivä kanada `kaala põdralõ </w:t>
 	<w:t>Se</w:t>
 
-	<w:t>*</w:t>
-<w:b/>	<w:t>kanatama </w:t>
+<w:b/><w:sz w:val="20"/>	<w:t>*kanatama </w:t>
 	<w:t>”</w:t><w:t>hellitama</w:t><w:t>”</w:t><w:t> </w:t>
 <w:i/>	<w:t>kanatagu</w:t><w:t>‿</w:t><w:t>i· ja he</w:t><w:t>ĺ</w:t><w:t>lätägu</w:t><w:t>‿</w:t><w:t>i·, är he</w:t><w:t>ĺ</w:t><w:t>lätat `väega </w:t>
 	<w:t>Se</w:t>
@@ -40185,8 +40174,8 @@
 <w:b/>	<w:t>2. </w:t>
 	<w:t>lühinägelikkus – Rõu</w:t>
 
-<w:b/>	<w:t>3</w:t>
-	<w:t>. kuutõbi – Se</w:t>
+<w:b/>	<w:t>3.</w:t>
+	<w:t>kuutõbi – Se</w:t>
 
 <w:b/>	<w:t>4. </w:t>
 	<w:t>kestev peavalu – Rõu</w:t>
