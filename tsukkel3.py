@@ -72,7 +72,6 @@ def xmliks(snr, rida):
     art_viide=""
     while not d[i].startswith("¤"):
         if d[i].startswith('<w:rStyle w:val="ms1"') or (d[i].startswith('<w:rStyle w:val="PoolpaksKiri"/>') and d[i-1].startswith("¤")):
-        #eelmise koodirea teine osa ei tööta, vt ms.xml märksõna "kaenla|täis|ohakas|päev|päev"
             marksona_ise=re.search('(?<=\<w:t\>)\*{,1}[\w|-]+', d[i])
             #\w hulgas ei ole š, z ja ž tähti
             artikkel = ET.SubElement(snr, "x:A")
@@ -89,7 +88,8 @@ def xmliks(snr, rida):
         #märksõnaviite lisamine
         elif '→' in d[i]:
             msviide=re.search('(?<=\<w:t\>→\<\/w:t\>\<w:t\>)[\w|\s|]+-{0,1}', d[i])
-            #järgnev tingimus lisatud sest osad märksõnaviited ei ole → märgiga sama real (ja jäävad praegu seega xml-ist välja)
+            #järgnev tingimus lisatud sest osad märksõnaviited ei ole → märgiga sama real
+            #(ja jäävad praegu seega xml-ist välja, kuidas seda lahendada?)
             if not msviide==None:
                 mvtg = ET.SubElement(pais, "x:mvtg")
                 mvt = ET.SubElement(mvtg, "x:mvt")
@@ -101,9 +101,9 @@ def xmliks(snr, rida):
                 marksona.attrib['x:i']=ms_attrib.group(0)
                 marksona.attrib['x:O']=marksona.text+ms_attrib.group(0)
         elif 'Vrd' in d[i]:
+            #töötab hetkel kui on ainult üks tähendusviide
+            #mitme viite vahel on komad või märgendid, aga kuidas neid ka ikka arvestada saaks?
             art_viide=re.search('(?<=\<w:t\>)[\w|\s]+', d[i+1])
-#            print(d[i+1])
-#            print(d[i+1].group(0))
             if not art_viide==None:
                 art_viide=art_viide.group(0)
                                
