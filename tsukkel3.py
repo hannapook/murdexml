@@ -1,3 +1,5 @@
+#kuidas on võimalik ära kustutada kõik märgendid mis on tühjad?
+
 import xml.etree.ElementTree as ET
 import re
 from xml.sax.saxutils import escape
@@ -38,8 +40,10 @@ def listiks(alglist):
                 line2=re.search('[0-9]{1,2}\.', alglist[i+1])
                 if not line2==None:
                     pass
+                #lisab % enne Vrd kui sellele eelneb tühi rida, sest siis on tegemist terve artikli
+                #viitegrupiga ja mitte ainult tähendusviitega
                 elif "Vrd" in alglist[i+1]:
-                    pass
+                    c.append('%')
                 else:
                     c.append("¤")
             except IndexError:
@@ -70,10 +74,12 @@ d=listiks(b)
 #for i in d:
 #    uus=re.sub('\<w:t\>[ ]*\<\/w:t\>','',i)
 
+
 def xmliks(snr, rida):
     i=rida+1
     kommentaar=""
     th_viide=""
+    sisu=""
     while not d[i].startswith("¤"):
         if d[i].startswith('<w:rStyle w:val="ms1"') or (d[i].startswith('<w:rStyle w:val="PoolpaksKiri"/>') and d[i-1].startswith("¤")):
             marksona_ise=re.search('(?<=\<w:t\>)\*{,1}[\w|-]+', d[i])
@@ -115,31 +121,83 @@ def xmliks(snr, rida):
             mvt_attrib=re.search('(?<=\<w:t\>)[0-9]{1,2}', d[i])
             mvt.attrib['x:i']=mvt_attrib.group(0)
             
-
-        #tähendusviidete lisamine
-        elif 'Vrd' in d[i]:
+        #tähendusviite lisamine
+        elif 'Vrd' in d[i] and not '%' in d[i-1]:
             #töötab hetkel kui on ainult üks tähendusviide
-            #mitme viite vahel on komad või märgendid, aga kuidas neid ka ikka arvestada saaks?
-            #hetkel jätab esimese tähendusviite ka kommentaari osasse kui neid on rohkem kui üks
+            #mitme viite vahel on komad või märgendid, aga kuidas neid ka ikka arvestada saakshetkel jätab esimese tähendusviite ka kommentaari osasse kui neid on rohkem kui üks
             th_viide=re.search('(?<=\<w:t\>)[\w|\s]+', d[i+1])
             if not th_viide==None:
                 th_viide=(th_viide.group(0)).strip()
-                sisu = ET.SubElement(artikkel, "x:S")
-                rnrp = ET.SubElement(sisu, "x:rp")
-                thnrp = ET.SubElement(rnrp, "x:tp")
-                thnr_vg=ET.SubElement(thnrp, "x:ptvtg")
-                thv=ET.SubElement(thnr_vg, "x:tvt")
-                thv.text=th_viide
-                thv.attrib['x:tvtl']="syn"
+                if sisu=="":
+                    sisu = ET.SubElement(artikkel, "x:S")
+                    rnrp = ET.SubElement(sisu, "x:rp")
+                    thnrp = ET.SubElement(rnrp, "x:tp")
+                    thnr_vg=ET.SubElement(thnrp, "x:ptvtg")
+                    thv=ET.SubElement(thnr_vg, "x:tvt")
+                    thv.text=th_viide
+                    thv.attrib['x:tvtl']="syn"
+                else:
+                    thnrp = ET.SubElement(rnrp, "x:tp")
+                    thnr_vg=ET.SubElement(thnrp, "x:ptvtg")
+                    thv=ET.SubElement(thnr_vg, "x:tvt")
+                    thv.text=th_viide
+                    thv.attrib['x:tvtl']="syn"                    
+            if 'superscript' in d[i+2]:
+                thv_attrib=re.search('(?<=\<w:t\>)[0-9]{1,2}', d[i+2])
+                thv.attrib['x:i']=thv_attrib.group(0)
 
-        #atribuutide lisamine tähendusviitele
-        elif 'superscript' in d[i] and 'Vrd' in d[i-2]:
-            thv_attrib=re.search('(?<=\<w:t\>)[0-9]{1,2}', d[i])
-            thv.attrib['x:i']=thv_attrib.group(0)
-        
+
+        #artikliviidete lisamine
+        elif 'Vrd' in d[i] and '%' in d[i-1]:
+            art_viide=re.search('(?<=\<w:t\>)[\w|\s]+', d[i+1])
+            if not art_viide==None:
+                art_viide=(art_viide.group(0)).strip()
+                if sisu=="":
+                    sisu = ET.SubElement(artikkel, "x:S")
+                    rnrp = ET.SubElement(sisu, "x:rp")
+                    avg = ET.SubElement(rnrp, "x:atvtg")
+                    artviide=ET.SubElement(avg, "x:tvt")
+                    artviide.text=art_viide
+                    artviide.attrib['x:tvtl']="syn"
+                else:
+                    avg = ET.SubElement(rnrp, "x:atvtg")
+                    artviide=ET.SubElement(avg, "x:tvt")
+                    artviide.text=art_viide
+                    artviide.attrib['x:tvtl']="syn"
+            if 'superscript' in d[i+2]:
+                art_attrib=re.search('(?<=\<w:t\>)[0-9]{1,2}', d[i+2])
+                artviide.attrib['x:i']=art_attrib.group(0)
+                
+
+        #üld-tähendusviidete lisamine
+        elif 'Vt' in d[i]:
+            yld_viide=re.search('(?<=\<w:t\>)[\w|\s]+', d[i+1])
+            if not yld_viide==None:
+                yld_viide=(yld_viide.group(0)).strip()
+                if sisu=="":
+                    sisu = ET.SubElement(artikkel, "x:S")
+                    rnrp = ET.SubElement(sisu, "x:rp")
+                    thnrp = ET.SubElement(rnrp, "x:tp")
+                    thnr_vg=ET.SubElement(thnrp, "x:ptvtg")
+                    thv=ET.SubElement(thnr_vg, "x:tvt")
+                    thv.text=yld_viide
+                    thv.attrib['x:tvtl']="yld"
+                else:
+                    thv=ET.SubElement(thnr_vg, "x:tvt")
+                    thv.text=th_viide
+                    thv.attrib['x:tvtl']="yld"
+            if 'superscript' in d[i+2]:
+                thv_attrib=re.search('(?<=\<w:t\>)[0-9]{1,2}', d[i+2])
+                thv.attrib['x:i']=thv_attrib.group(0)
+
+       
         #ignoreerib tähendusviite ridu, st ei pane neid muu kommentaari hulka
         #juhul kui tähendusviite real on ainult üks viide
-        elif not ',' in d[i] and 'Vrd' in d[i-1]:
+        elif not ',' in d[i] and ('Vrd' in d[i-1] or 'Vt' in d[i-1]):
+            pass
+
+        #ignoreerib homonüüminumbri ridu ja ei lisa neid muu kommentaari hulka
+        elif 'superscript' in d[i] and ('Vt' in d[i-2] or 'Vrd' in d[i-2]):
             pass
                
         #liidab kogu ülejäänud artikli sisu kokku ja kustutab märgendid
