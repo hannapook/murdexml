@@ -7062,7 +7062,7 @@
 <w:sz w:val="20"/>	<w:t>) T(</w:t><w:t>#NBH#</w:t>
 <w:i/><w:sz w:val="20"/>	<w:t>mõ, </w:t><w:t>#NBH#me, </w:t><w:t>#NBH#madõ</w:t>
 <w:sz w:val="20"/>	<w:t> San) V(</w:t><w:t>#NBH#</w:t>
-<w:i/><w:sz w:val="20"/>	<w:t>mõ, `kaimõ</w:t>
+<w:i/><w:sz w:val="20"/>	<w:t>mõ,`kaimõ</w:t>
 <w:sz w:val="20"/>	<w:t> Krl, </w:t>
 <w:i/><w:sz w:val="20"/>	<w:t>kaõma</w:t>
 <w:sz w:val="20"/>	<w:t> Lei, </w:t>
@@ -7084,7 +7084,7 @@
 <w:sz w:val="20"/>	<w:t> V(</w:t>
 <w:i/><w:sz w:val="20"/>	<w:t>`kaia</w:t><w:t>ʔ</w:t>
 <w:sz w:val="20"/>	<w:t> Lei; </w:t>
-<w:i/><w:sz w:val="20"/>	<w:t>kaia, `kaia</w:t>
+<w:i/><w:sz w:val="20"/>	<w:t>kaia,`kaia</w:t>
 <w:sz w:val="20"/>	<w:t> Se Lut)</w:t>
 
 <w:b/><w:sz w:val="20"/>	<w:t>1. a.</w:t>
