@@ -260,10 +260,11 @@ def xmliks(snr, rida):
 
 
         #näidete lisamine
-        #töötab hetkel max 8 tähendusgrupiga, sest ei osanud intelligentsemat lahendust välja mõelda
+        #töötab hetkel max 7 tähendusgrupiga, sest ei osanud intelligentsemat lahendust välja mõelda
         #ilmselt saaks siin (ja eelmises plokis) kasutada while tsüklit, aga mul ei õnnestunud
         elif (d[i].startswith('<w:i/><w:sz w:val="20"') or d[i].startswith('<w:i/>	')) and not ' </w:t><w:t>#NBH#' in d[i] and ' ' in (re.sub('\<[\/]*w[^\>]*\>', '', d[i])).strip():
             naide=(re.sub('\<[\/]*w[^\>]*\>', '', d[i])).strip()
+            naide=re.sub('#NBH#', '-', naide)
             if not 'sisu' in locals():
                 sisu = ET.SubElement(artikkel, "x:S")
                 rnrp = ET.SubElement(sisu, "x:rp")
@@ -459,7 +460,7 @@ def xmliks(snr, rida):
 
 
         #kihelkondade ridade ignoreerimine muu kommentaari hulgas
-        elif any(kohalyh for kihelkond in d[i]) and (d[i-1].startswith('<w:i/><w:sz w:val="20"') or d[i-1].startswith('<w:i/>	')) and ' ' in (re.sub('\<[\/]*w[^\>]*\>', '', d[i-1])).strip():
+        elif any(kihelkond in d[i] for kihelkond in kohalyh) and (d[i-1].startswith('<w:i/><w:sz w:val="20"') or d[i-1].startswith('<w:i/>	')) and ' ' in (re.sub('\<[\/]*w[^\>]*\>', '', d[i-1])).strip():
             pass
        
         #ignoreerib tähendusviite ridu, st ei pane neid muu kommentaari hulka
@@ -469,6 +470,9 @@ def xmliks(snr, rida):
 
         #ignoreerib homonüüminumbri ridu ja ei lisa neid muu kommentaari hulka
         elif 'superscript' in d[i] and ('Vt' in d[i-2] or 'Vrd' in d[i-2]):
+            pass
+
+        elif '%' in d[i]:
             pass
 
               
@@ -499,7 +503,8 @@ for j,i in enumerate(d): #j on indeks, i on rida
         except IndexError:
             pass
 
-
-        
+       
 tree = ET.ElementTree(snr)
-tree.write("ms.xml", encoding='utf8')
+tree.write("ms.xml", encoding="utf8")
+
+#tühjad märgendid kustutasin hiljem käsureal, sest ei saanud ET remove() funktsiooni kasutamisest aru
