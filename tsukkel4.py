@@ -26,7 +26,7 @@ def listiks(alglist):
                 elif alglist[i+1].startswith('<w:b/><w:sz w:val="20"/>') and not 'Vrd' in alglist[i+1] and line==None:
                     alglist[i+1]=re.sub('\<w:b\/\>\<w:sz w:val="20"\/\>', '<w:rStyle w:val="ms1"', alglist[i+1])
                 elif alglist[i+1].startswith('<w:i/><w:sz w:val="20"/>') and not 'Vrd' in alglist[i+1] and line==None:
-                    alglist[i+1]=re.sub('\<w:i\/\>\<w:sz w:val="20"\/\>', '<w:rStyle w:val="ms1"/>', alglist[i+1])
+                    alglist[i+1]=re.sub('\<w:i\/\>\<w:sz w:val="20"\/\>', '<w:rStyle w:val="ms1it"/>', alglist[i+1])
                 elif alglist[i+1].startswith('	'):
                     alglist[i+1]=re.sub('^	','',alglist[i+1])
                 if 'ž' in alglist[i+1]:
@@ -81,7 +81,7 @@ d=listiks(b)
 #   print(i)
 
 
-kohalyh=['Amb', 'Ann', 'Ans', 'Aud', 'eL', 'Emm', 'Emanner', 'eP', 'Ha', 'Hag', 'HaId', 'HaLo', 'HaLä', 'Han', 'Har', 'Hel', 'Hi', 'HJn', 'Hlj', 'HljK', 'Hls', 'HMd', 'Hää', 'I', 'Iis', 'IisK', 'IisR', 'ILõ', 'IPõ', 'Jaa', 'JJn', 'JMd', 'Juu', 'Jõe', 'JõeK', 'Jõh', 'Jä', 'Jäm', 'Jür', 'K', 'Kaa', 'Kad', 'Kam', 'Kan', 'Kei', 'Khk', 'Khn', 'Kir', 'KJn', 'KLõ', 'Kod', 'KodT', 'Koe', 'Kos', 'KPõ', 'Kra', 'Krj', 'Krk', 'Krl', 'Kse', 'Ksi', 'Kul', 'Kuu', 'KuuK', 'Kõp', 'Käi', 'Kär', 'L', 'Lai', 'Lei', 'Lih', 'LNg', 'Luk', 'Lut', 'Lä', 'LäEd', 'LäLo', 'LäLõ', 'LäPõ', 'Lüg', 'M', 'Mar', 'Mih', 'MMg', 'MMgT', 'Muh', 'Mus', 'Mär', 'Nai', 'Nis', 'Noa', 'Nõo', 'Ote', 'Pai', 'Pal', 'Pee', 'Pha', 'Phl', 'Pil', 'PJg', 'Plt', 'Plv', 'Pst', 'Puh', 'Pä', 'PäLo', 'PäPõ', 'Pär', 'Pöi', 'R', 'Rak', 'RakR', 'Ran', 'Rap', 'Rei', 'RId', 'Rid', 'Ris', 'Rõn', 'Rõu', 'Räp', 'S', 'Sa', 'Saa', 'SaId', 'SaLä', 'San', 'Se', 'Sim', 'SJn', 'T', 'TaPõ', 'TLä', 'TMr', 'Tor', 'Trm', 'Trv', 'Tõs', 'Tür', 'Urv', 'V', 'Vai', 'Var', 'Vas', 'VId', 'Vig', 'ViK', 'Vil', 'VJg', 'Vll', 'VlPõ', 'VLä', 'VMr', 'VNg', 'Vor', 'Võn', 'Vän', 'Äks']
+kohalyh=['Amb', 'Ann', 'Ans', 'Aud', 'Emm', 'Hag', 'Han', 'Har', 'Hel', 'HJn', 'Hlj', 'HljK', 'Hls', 'HMd', 'Hää', 'Iis', 'IisK', 'IisR', 'Jaa', 'JJn', 'JMd', 'Juu', 'Jõe', 'JõeK', 'Jõh', 'Jäm', 'Jür', 'Kaa', 'Kad', 'Kam', 'Kan', 'Kei', 'Khk', 'Khn', 'Kir', 'KJn', 'Kod', 'KodT', 'Koe', 'Kos', 'Kra', 'Krj', 'Krk', 'Krl', 'Kse', 'Ksi', 'Kul', 'Kuu', 'KuuK', 'Kõp', 'Käi', 'Kär', 'Lai', 'Lei', 'Lih', 'LNg', 'Luk', 'Lut', 'Lüg', 'Mar', 'Mih', 'MMg', 'MMgT', 'Muh', 'Mus', 'Mär', 'Nai', 'Nis', 'Noa', 'Nõo', 'Ote', 'Pai', 'Pal', 'Pee', 'Pha', 'Phl', 'Pil', 'PJg', 'Plt', 'Plv', 'Pst', 'Puh', 'Pär', 'Pöi', 'Rak', 'RakR', 'Ran', 'Rap', 'Rei', 'Rid', 'Ris', 'Rõn', 'Rõu', 'Räp', 'Saa', 'San', 'Se', 'Sim', 'SJn', 'TMr', 'Tor', 'Trm', 'Trv', 'Tõs', 'Tür', 'Urv', 'Vai', 'Var', 'Vas', 'Vig', 'Vil', 'VJg', 'Vll', 'VMr', 'VNg', 'Vor', 'Võn', 'Vän', 'Äks']
 
 def xmliks(snr, rida):
     i=rida+1
@@ -89,20 +89,23 @@ def xmliks(snr, rida):
     
     while not d[i].startswith("¤"):
       
-        if d[i].startswith('<w:rStyle w:val="ms1"') or (d[i].startswith('<w:rStyle w:val="PoolpaksKiri"/>') and d[i-1].startswith("¤")):
+        if d[i].startswith('<w:rStyle w:val="ms1') or (d[i].startswith('<w:rStyle w:val="PoolpaksKiri"/>') and d[i-1].startswith("¤")):
             marksona_ise=re.search('(?<=\<w:t\>)\*{,1}[\w|-]+', d[i])
             artikkel = ET.SubElement(snr, "x:A")
             pais = ET.SubElement(artikkel, "x:P")
             ms_grupp = ET.SubElement(pais, "x:mg")
             marksona = ET.SubElement(ms_grupp, "x:m")
             marksona.text=marksona_ise.group(0)
+            if d[i].startswith('<w:rStyle w:val="ms1it"'):
+                marksona.attrib['x:liik']="h"
+                
             
         #liitsõna lisamine märksõnale
-        elif ("<w:t>|" in d[i] or "	<w:t>#NBH#</w:t>" in d[i] or ", </w:t><w:t>#NBH#</w:t>" in d[i]) and marksona.text!="":
+        elif ("<w:t>|</w:t>" in d[i] or "	<w:t>#NBH#</w:t>" in d[i] or ", </w:t><w:t>#NBH#</w:t>" in d[i]) and marksona.text!="":
             marksona.text=marksona.text+"|"
             
         elif (d[i].startswith('<w:rStyle w:val="ms2"') or d[i].startswith('<w:rStyle w:val="ms4"')) and marksona.text.endswith("|"):
-            liits=re.search('(?<=\<w:t\>)\w+', d[i])
+            liits=re.search('(?<=\<w:t\>)[\w|\|]+', d[i])
             marksona.text=marksona.text+liits.group(0)
 
         #atribuutide lisamine märksõnale
@@ -276,9 +279,9 @@ def xmliks(snr, rida):
                 naide_ise= ET.SubElement(ngrupp, "x:n")
                 naide_ise.text=naide
                 khlk=(re.sub('\<[\/]*w[^\>]*\>', '', d[i+1])).strip()
-                if any(kihelkond in khlk for kihelkond in kohalyh):
-                    kihelkonnatekst=re.search('([\w]*)', khlk)
-                    if not kihelkonnatekst==None:
+                kihelkonnatekst=re.search('([\w]*)', khlk)
+                if any(kihelkond in kihelkonnatekst.group(0) for kihelkond in kohalyh):
+                   if not kihelkonnatekst==None:
                         kihelkonnatekst=kihelkonnatekst.group(0)
                         kihelkond= ET.SubElement(ngrupp, "x:khk")
                         kihelkond.text=kihelkonnatekst
@@ -290,9 +293,9 @@ def xmliks(snr, rida):
                     naide_ise= ET.SubElement(ngrupp, "x:n")
                     naide_ise.text=naide
                     khlk=(re.sub('\<[\/]*w[^\>]*\>', '', d[i+1])).strip()
-                    if any(kihelkond in khlk for kihelkond in kohalyh):
-                        kihelkonnatekst=re.search('([\w]*)', khlk)
-                        if not kihelkonnatekst==None:
+                    kihelkonnatekst=re.search('([\w]*)', khlk)
+                    if any(kihelkond in kihelkonnatekst.group(0) for kihelkond in kohalyh):
+                       if not kihelkonnatekst==None:
                             kihelkonnatekst=kihelkonnatekst.group(0)
                             kihelkond= ET.SubElement(ngrupp, "x:khk")
                             kihelkond.text=kihelkonnatekst
@@ -301,9 +304,9 @@ def xmliks(snr, rida):
                     naide_ise= ET.SubElement(ngrupp, "x:n")
                     naide_ise.text=naide
                     khlk=(re.sub('\<[\/]*w[^\>]*\>', '', d[i+1])).strip()
-                    if any(kihelkond in khlk for kihelkond in kohalyh):
-                        kihelkonnatekst=re.search('([\w]*)', khlk)
-                        if not kihelkonnatekst==None:
+                    kihelkonnatekst=re.search('([\w]*)', khlk)
+                    if any(kihelkond in kihelkonnatekst.group(0) for kihelkond in kohalyh):
+                       if not kihelkonnatekst==None:
                             kihelkonnatekst=kihelkonnatekst.group(0)
                             kihelkond= ET.SubElement(ngrupp, "x:khk")
                             kihelkond.text=kihelkonnatekst
@@ -315,9 +318,9 @@ def xmliks(snr, rida):
                     naide_ise= ET.SubElement(ngrupp, "x:n")
                     naide_ise.text=naide
                     khlk=(re.sub('\<[\/]*w[^\>]*\>', '', d[i+1])).strip()
-                    if any(kihelkond in khlk for kihelkond in kohalyh):
-                        kihelkonnatekst=re.search('([\w]*)', khlk)
-                        if not kihelkonnatekst==None:
+                    kihelkonnatekst=re.search('([\w]*)', khlk)
+                    if any(kihelkond in kihelkonnatekst.group(0) for kihelkond in kohalyh):
+                       if not kihelkonnatekst==None:
                             kihelkonnatekst=kihelkonnatekst.group(0)
                             kihelkond= ET.SubElement(ngrupp, "x:khk")
                             kihelkond.text=kihelkonnatekst
@@ -326,8 +329,8 @@ def xmliks(snr, rida):
                     naide_ise= ET.SubElement(ngrupp, "x:n")
                     naide_ise.text=naide
                     khlk=(re.sub('\<[\/]*w[^\>]*\>', '', d[i+1])).strip()
-                    if any(kihelkond in khlk for kihelkond in kohalyh):
-                        kihelkonnatekst=re.search('([\w]*)', khlk)
+                    kihelkonnatekst=re.search('([\w]*)', khlk)
+                    if any(kihelkond in kihelkonnatekst.group(0) for kihelkond in kohalyh):
                         if not kihelkonnatekst==None:
                             kihelkonnatekst=kihelkonnatekst.group(0)
                             kihelkond= ET.SubElement(ngrupp, "x:khk")
@@ -340,8 +343,8 @@ def xmliks(snr, rida):
                     naide_ise= ET.SubElement(ngrupp, "x:n")
                     naide_ise.text=naide
                     khlk=(re.sub('\<[\/]*w[^\>]*\>', '', d[i+1])).strip()
-                    if any(kihelkond in khlk for kihelkond in kohalyh):
-                        kihelkonnatekst=re.search('([\w]*)', khlk)
+                    kihelkonnatekst=re.search('([\w]*)', khlk)
+                    if any(kihelkond in kihelkonnatekst.group(0) for kihelkond in kohalyh):
                         if not kihelkonnatekst==None:
                             kihelkonnatekst=kihelkonnatekst.group(0)
                             kihelkond= ET.SubElement(ngrupp, "x:khk")
@@ -351,8 +354,8 @@ def xmliks(snr, rida):
                     naide_ise= ET.SubElement(ngrupp, "x:n")
                     naide_ise.text=naide
                     khlk=(re.sub('\<[\/]*w[^\>]*\>', '', d[i+1])).strip()
-                    if any(kihelkond in khlk for kihelkond in kohalyh):
-                        kihelkonnatekst=re.search('([\w]*)', khlk)
+                    kihelkonnatekst=re.search('([\w]*)', khlk)
+                    if any(kihelkond in kihelkonnatekst.group(0) for kihelkond in kohalyh):
                         if not kihelkonnatekst==None:
                             kihelkonnatekst=kihelkonnatekst.group(0)
                             kihelkond= ET.SubElement(ngrupp, "x:khk")
@@ -365,8 +368,8 @@ def xmliks(snr, rida):
                     naide_ise= ET.SubElement(ngrupp, "x:n")
                     naide_ise.text=naide
                     khlk=(re.sub('\<[\/]*w[^\>]*\>', '', d[i+1])).strip()
-                    if any(kihelkond in khlk for kihelkond in kohalyh):
-                        kihelkonnatekst=re.search('([\w]*)', khlk)
+                    kihelkonnatekst=re.search('([\w]*)', khlk)
+                    if any(kihelkond in kihelkonnatekst.group(0) for kihelkond in kohalyh):
                         if not kihelkonnatekst==None:
                             kihelkonnatekst=kihelkonnatekst.group(0)
                             kihelkond= ET.SubElement(ngrupp, "x:khk")
@@ -376,8 +379,8 @@ def xmliks(snr, rida):
                     naide_ise= ET.SubElement(ngrupp, "x:n")
                     naide_ise.text=naide
                     khlk=(re.sub('\<[\/]*w[^\>]*\>', '', d[i+1])).strip()
-                    if any(kihelkond in khlk for kihelkond in kohalyh):
-                        kihelkonnatekst=re.search('([\w]*)', khlk)
+                    kihelkonnatekst=re.search('([\w]*)', khlk)
+                    if any(kihelkond in kihelkonnatekst.group(0) for kihelkond in kohalyh):
                         if not kihelkonnatekst==None:
                             kihelkonnatekst=kihelkonnatekst.group(0)
                             kihelkond= ET.SubElement(ngrupp, "x:khk")
@@ -390,8 +393,8 @@ def xmliks(snr, rida):
                     naide_ise= ET.SubElement(ngrupp, "x:n")
                     naide_ise.text=naide
                     khlk=(re.sub('\<[\/]*w[^\>]*\>', '', d[i+1])).strip()
-                    if any(kihelkond in khlk for kihelkond in kohalyh):
-                        kihelkonnatekst=re.search('([\w]*)', khlk)
+                    kihelkonnatekst=re.search('([\w]*)', khlk)
+                    if any(kihelkond in kihelkonnatekst.group(0) for kihelkond in kohalyh):
                         if not kihelkonnatekst==None:
                             kihelkonnatekst=kihelkonnatekst.group(0)
                             kihelkond= ET.SubElement(ngrupp, "x:khk")
@@ -401,8 +404,8 @@ def xmliks(snr, rida):
                     naide_ise= ET.SubElement(ngrupp, "x:n")
                     naide_ise.text=naide
                     khlk=(re.sub('\<[\/]*w[^\>]*\>', '', d[i+1])).strip()
-                    if any(kihelkond in khlk for kihelkond in kohalyh):
-                        kihelkonnatekst=re.search('([\w]*)', khlk)
+                    kihelkonnatekst=re.search('([\w]*)', khlk)
+                    if any(kihelkond in kihelkonnatekst.group(0) for kihelkond in kohalyh):
                         if not kihelkonnatekst==None:
                             kihelkonnatekst=kihelkonnatekst.group(0)
                             kihelkond= ET.SubElement(ngrupp, "x:khk")
@@ -415,8 +418,8 @@ def xmliks(snr, rida):
                     naide_ise= ET.SubElement(ngrupp, "x:n")
                     naide_ise.text=naide
                     khlk=(re.sub('\<[\/]*w[^\>]*\>', '', d[i+1])).strip()
-                    if any(kihelkond in khlk for kihelkond in kohalyh):
-                        kihelkonnatekst=re.search('([\w]*)', khlk)
+                    kihelkonnatekst=re.search('([\w]*)', khlk)
+                    if any(kihelkond in kihelkonnatekst.group(0) for kihelkond in kohalyh):
                         if not kihelkonnatekst==None:
                             kihelkonnatekst=kihelkonnatekst.group(0)
                             kihelkond= ET.SubElement(ngrupp, "x:khk")
@@ -426,8 +429,8 @@ def xmliks(snr, rida):
                     naide_ise= ET.SubElement(ngrupp, "x:n")
                     naide_ise.text=naide
                     khlk=(re.sub('\<[\/]*w[^\>]*\>', '', d[i+1])).strip()
-                    if any(kihelkond in khlk for kihelkond in kohalyh):
-                        kihelkonnatekst=re.search('([\w]*)', khlk)
+                    kihelkonnatekst=re.search('([\w]*)', khlk)
+                    if any(kihelkond in kihelkonnatekst.group(0) for kihelkond in kohalyh):
                         if not kihelkonnatekst==None:
                             kihelkonnatekst=kihelkonnatekst.group(0)
                             kihelkond= ET.SubElement(ngrupp, "x:khk")
@@ -440,8 +443,8 @@ def xmliks(snr, rida):
                     naide_ise= ET.SubElement(ngrupp, "x:n")
                     naide_ise.text=naide
                     khlk=(re.sub('\<[\/]*w[^\>]*\>', '', d[i+1])).strip()
-                    if any(kihelkond in khlk for kihelkond in kohalyh):
-                        kihelkonnatekst=re.search('([\w]*)', khlk)
+                    kihelkonnatekst=re.search('([\w]*)', khlk)
+                    if any(kihelkond in kihelkonnatekst.group(0) for kihelkond in kohalyh):
                         if not kihelkonnatekst==None:
                             kihelkonnatekst=kihelkonnatekst.group(0)
                             kihelkond= ET.SubElement(ngrupp, "x:khk")
@@ -451,47 +454,50 @@ def xmliks(snr, rida):
                     naide_ise= ET.SubElement(ngrupp, "x:n")
                     naide_ise.text=naide
                     khlk=(re.sub('\<[\/]*w[^\>]*\>', '', d[i+1])).strip()
-                    if any(kihelkond in khlk for kihelkond in kohalyh):
-                        kihelkonnatekst=re.search('([\w]*)', khlk)
+                    kihelkonnatekst=re.search('([\w]*)', khlk)
+                    if any(kihelkond in kihelkonnatekst.group(0) for kihelkond in kohalyh):
                         if not kihelkonnatekst==None:
                             kihelkonnatekst=kihelkonnatekst.group(0)
                             kihelkond= ET.SubElement(ngrupp, "x:khk")
                             kihelkond.text=kihelkonnatekst
 
 
-        #kihelkondade ridade ignoreerimine muu kommentaari hulgas
-        elif any(kihelkond in d[i] for kihelkond in kohalyh) and (d[i-1].startswith('<w:i/><w:sz w:val="20"') or d[i-1].startswith('<w:i/>	')) and ' ' in (re.sub('\<[\/]*w[^\>]*\>', '', d[i-1])).strip():
-            pass
-       
-        #ignoreerib tähendusviite ridu, st ei pane neid muu kommentaari hulka
-        #juhul kui tähendusviite real on ainult üks viide
-        elif not ',' in d[i] and ('Vrd' in d[i-1] or 'Vt' in d[i-1]):
-            pass
+##        #kihelkondade ridade ignoreerimine muu kommentaari hulgas
+##        elif any(kihelkond in d[i] for kihelkond in kohalyh) and (d[i-1].startswith('<w:i/><w:sz w:val="20"') or d[i-1].startswith('<w:i/>	')) and ' ' in (re.sub('\<[\/]*w[^\>]*\>', '', d[i-1])).strip():
+##            pass
+##       
+##        #ignoreerib tähendusviite ridu, st ei pane neid muu kommentaari hulka
+##        #juhul kui tähendusviite real on ainult üks viide
+##        elif not ',' in d[i] and ('Vrd' in d[i-1] or 'Vt' in d[i-1]):
+##            pass
+##
+##        #ignoreerib homonüüminumbri ridu ja ei lisa neid muu kommentaari hulka
+##        elif 'superscript' in d[i] and ('Vt' in d[i-2] or 'Vrd' in d[i-2]):
+##            pass
+##
+##        elif '%' in d[i]:
+##            pass
+##
+##              
+##        #liidab kogu ülejäänud artikli sisu kokku ja kustutab märgendid
+##        else:
+##            #juhul kui tähendusviite real on rohkem kui üks viide, siis kustutab praegu ära esimese,
+##            #mis on juba tähendusviite elemendis, aga jätab ülejäänud muu kommentaari hulka
+##            if ',' in d[i] and 'Vrd' in d[i-1]:
+##                d[i]=re.sub('(\<w:t\>)[^,]*,(.*)$','\g<1>\g<2>', d[i])
+##                kommentaar=kommentaar+re.sub('\<[\/]*w[^\>]*\>', '', d[i])
+##            else:
+##                kommentaar=kommentaar+re.sub('\<[\/]*w[^\>]*\>', '', d[i])
 
-        #ignoreerib homonüüminumbri ridu ja ei lisa neid muu kommentaari hulka
-        elif 'superscript' in d[i] and ('Vt' in d[i-2] or 'Vrd' in d[i-2]):
-            pass
-
-        elif '%' in d[i]:
-            pass
-
-              
-        #liidab kogu ülejäänud artikli sisu kokku ja kustutab märgendid
-        else:
-            #juhul kui tähendusviite real on rohkem kui üks viide, siis kustutab praegu ära esimese,
-            #mis on juba tähendusviite elemendis, aga jätab ülejäänud muu kommentaari hulka
-            if ',' in d[i] and 'Vrd' in d[i-1]:
-                d[i]=re.sub('(\<w:t\>)[^,]*,(.*)$','\g<1>\g<2>', d[i])
-                kommentaar=kommentaar+re.sub('\<[\/]*w[^\>]*\>', '', d[i])
-            else:
-                kommentaar=kommentaar+re.sub('\<[\/]*w[^\>]*\>', '', d[i])
-
+        kommentaar=kommentaar+re.sub('\<[\/]*w[^\>]*\>', '', d[i])
         i=i+1
 
 
     if not 'kommentaar'=="":
         data=ET.SubElement(artikkel, "x:data")
         kommentaar=re.sub('#NBH#', '-', kommentaar)
+        kommentaar=re.sub('€', '', kommentaar)
+        kommentaar=re.sub('%', '', kommentaar)
         data.text=kommentaar.strip()
 
     return snr
