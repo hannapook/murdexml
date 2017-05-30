@@ -1619,7 +1619,8 @@
 <w:b/><w:sz w:val="20"/>	<w:t>Vrd</w:t>
 <w:sz w:val="20"/>	<w:t> kadajane, kadajine, kõdajanõ</w:t>
 
-<w:b/><w:sz w:val="20"/>	<w:t>kadaka|</w:t>
+<w:b/><w:sz w:val="20"/>	<w:t>kadaka</w:t>
+<w:b/><w:sz w:val="20"/>	<w:t>|</w:t>
 <w:rStyle w:val="ms4"/>	<w:t>näre</w:t>
 <w:sz w:val="20"/>	<w:t> </w:t>
 <w:i/><w:sz w:val="20"/>	<w:t>kadaka närä ei `kasvand `suuremast ka ja `vällä ka ei `kuivand, õli `niisikene pisike `nässäkas</w:t>
@@ -1923,7 +1924,8 @@
 <w:b/><w:sz w:val="20"/>	<w:t>Vrd</w:t>
 <w:sz w:val="20"/>	<w:t> kadajaõli</w:t>
 
-<w:b/><w:sz w:val="20"/>	<w:t>kadak|</w:t>
+<w:b/><w:sz w:val="20"/>	<w:t>kadak</w:t>
+<w:b/><w:sz w:val="20"/>	<w:t>|</w:t>
 <w:rStyle w:val="ms4"/>	<w:t>kärt</w:t>
 <w:sz w:val="20"/>	<w:t> </w:t>
 <w:i/><w:sz w:val="20"/>	<w:t>kadakkärt on rohekas lind, `löukese arulene. kadakate `kaela teeb pesa</w:t>
@@ -2359,8 +2361,8 @@
 <w:rStyle w:val="ms1"/>	<w:t>kadedus</w:t>
 <w:sz w:val="20"/>	<w:t> </w:t>
 <w:i/><w:sz w:val="20"/>	<w:t>kade|dus</w:t>
-<w:sz w:val="20"/>	<w:t> Kuu VNg Vai eP(</w:t><w:t>#NBH#</w:t>
-<w:i/><w:sz w:val="20"/>	<w:t>dos</w:t>
+<w:sz w:val="20"/>	<w:t> Kuu VNg Vai eP(</w:t>
+<w:i/><w:sz w:val="20"/>	<w:t>#NBH#dos</w:t>
 <w:sz w:val="20"/>	<w:t> Käi) M, </w:t>
 <w:i/><w:sz w:val="20"/>	<w:t>#NBH#duss</w:t>
 <w:sz w:val="20"/>	<w:t> TLä KodT Kam, </w:t>
@@ -3643,12 +3645,12 @@
 <w:rStyle w:val="ms3"/>	<w:t>1</w:t>
 <w:sz w:val="20"/>	<w:t> </w:t>
 <w:i/><w:sz w:val="20"/>	<w:t>kaduma</w:t>
-<w:sz w:val="20"/>	<w:t> R(</w:t><w:t>#NBH#</w:t>
-<w:i/><w:sz w:val="20"/>	<w:t>o-</w:t>
+<w:sz w:val="20"/>	<w:t> R(</w:t>
+<w:i/><w:sz w:val="20"/>	<w:t>#NBH#o-</w:t>
 <w:sz w:val="20"/>	<w:t>Vai; </w:t>
 <w:i/><w:sz w:val="20"/>	<w:t>#NBH#ie</w:t>
-<w:sz w:val="20"/>	<w:t> Lüg) eP(</w:t><w:t>#NBH#</w:t>
-<w:i/><w:sz w:val="20"/>	<w:t>o- </w:t>
+<w:sz w:val="20"/>	<w:t> Lüg) eP(</w:t>
+<w:i/><w:sz w:val="20"/>	<w:t>#NBH#o- </w:t>
 <w:sz w:val="20"/>	<w:t>Käi Lä Ris) Trv T, </w:t>
 <w:i/><w:sz w:val="20"/>	<w:t>#NBH#e</w:t>
 <w:sz w:val="20"/>	<w:t> M San, </w:t>
@@ -3670,7 +3672,7 @@
 <w:sz w:val="20"/>	<w:t> Ans) Kse Var PJg HJn Amb Ann Kad Rak VJg Iis, </w:t>
 <w:i/><w:sz w:val="20"/>	<w:t>kaju- </w:t>
 <w:sz w:val="20"/>	<w:t>(</w:t>
-<w:i/><w:sz w:val="20"/>	<w:t>kajo</w:t><w:t>#NBH#</w:t>
+<w:i/><w:sz w:val="20"/>	<w:t>kajo#NBH#</w:t>
 <w:sz w:val="20"/>	<w:t>) Vig Kir PJg, </w:t>
 <w:i/><w:sz w:val="20"/>	<w:t>kadun</w:t>
 <w:sz w:val="20"/>	<w:t> R I Lai; ipf (ta) </w:t>
@@ -4552,12 +4554,12 @@
 <w:sz w:val="16"/>	<w:t>spor</w:t>
 	<w:t> Lä, Tõs Kei Juu HaId Koe Kad TaPõ, </w:t>
 <w:i/>	<w:t>`kaibama </w:t>
-	<w:t>R(</w:t><w:t>#NBH#</w:t>
-<w:i/>	<w:t>ie </w:t>
+	<w:t>R(</w:t>
+<w:i/>	<w:t>#NBH#ie </w:t>
 	<w:t>Lüg) S (`</w:t>
 <w:i/>	<w:t>kae-</w:t>
-	<w:t> Emm Rei) Kse Var Pä Ksi KJn Vil Trv T V(</w:t><w:t>#NBH#</w:t>
-<w:i/>	<w:t>mma</w:t>
+	<w:t> Emm Rei) Kse Var Pä Ksi KJn Vil Trv T V(</w:t>
+<w:i/>	<w:t>#NBH#mma</w:t>
 	<w:t>), </w:t>
 <w:i/>	<w:t>#NBH#me </w:t>
 	<w:t>M San</w:t>
@@ -4577,7 +4579,7 @@
 	<w:t> Jõe</w:t>
 <w:i/>	<w:t>, kaivata </w:t>
 	<w:t>Khk Vll Pöi Rei Kse Han Tõs Võn(</w:t>
-<w:i/>	<w:t>kaa</w:t><w:t>v́</w:t><w:t>-, kaab</w:t><w:t>#NBH#</w:t>
+<w:i/>	<w:t>kaa</w:t><w:t>v́</w:t><w:t>-, kaab#NBH#</w:t>
 	<w:t>)</w:t>
 <w:i/>	<w:t>, </w:t><w:t>#NBH#te </w:t>
 	<w:t>Krk Hls, </w:t>
@@ -4586,8 +4588,8 @@
 <w:i/>	<w:t>, </w:t><w:t>#NBH#da</w:t><w:t>ʔ</w:t><w:t> </w:t>
 	<w:t>Urv Plv</w:t>
 <w:i/>	<w:t>, kaavada</w:t><w:t>ʔ</w:t><w:t> </w:t>
-	<w:t>Har Rõu/</w:t><w:t>#NBH#</w:t>
-<w:i/>	<w:t>v́</w:t>
+	<w:t>Har Rõu/</w:t>
+<w:i/>	<w:t>#NBH#v́</w:t>
 	<w:t>#NBH#/, </w:t>
 <w:i/>	<w:t>`kaavada, kaavata</w:t>
 	<w:t> Lei, </w:t>
@@ -4598,8 +4600,8 @@
 <w:i/>	<w:t> kaebata </w:t>
 	<w:t>Mär Hää KJn, </w:t>
 <w:i/>	<w:t>`kaibada </w:t>
-	<w:t>R S Hää, </w:t><w:t>#NBH#</w:t>
-<w:i/>	<w:t>de</w:t>
+	<w:t>R S Hää, </w:t>
+<w:i/>	<w:t>#NBH#de</w:t>
 	<w:t> Hls</w:t>
 <w:i/>	<w:t>, kaibata </w:t>
 	<w:t>Phl Hää</w:t>
@@ -10413,8 +10415,8 @@
 <w:i/><w:sz w:val="20"/>	<w:t>kahhar, kaha</w:t><w:t>ŕ</w:t>
 <w:sz w:val="20"/>	<w:t> Lut), g </w:t>
 <w:i/><w:sz w:val="20"/>	<w:t>kaha|ra</w:t>
-<w:sz w:val="20"/>	<w:t> Plv Se Lut, </w:t><w:t>#NBH#</w:t>
-<w:i/><w:sz w:val="20"/>	<w:t>rõ</w:t>
+<w:sz w:val="20"/>	<w:t> Plv Se Lut, </w:t>
+<w:i/><w:sz w:val="20"/>	<w:t>#NBH#rõ</w:t>
 <w:sz w:val="20"/>	<w:t> Har Rõu</w:t>
 
 <w:b/><w:sz w:val="20"/>	<w:t>1.</w:t>
@@ -11239,8 +11241,8 @@
 <w:i/><w:sz w:val="20"/>	<w:t>`kaiksa</w:t>
 <w:sz w:val="20"/>	<w:t> Juu, </w:t>
 <w:i/><w:sz w:val="20"/>	<w:t>kahessa</w:t>
-<w:sz w:val="20"/>	<w:t> Jaa Muh Rei L MMg Pal Äks Ksi Lai VlPõ Pst TMr, </w:t><w:t>#NBH#</w:t>
-<w:i/><w:sz w:val="20"/>	<w:t>e</w:t>
+<w:sz w:val="20"/>	<w:t> Jaa Muh Rei L MMg Pal Äks Ksi Lai VlPõ Pst TMr, </w:t>
+<w:i/><w:sz w:val="20"/>	<w:t>#NBH#e</w:t>
 <w:sz w:val="20"/>	<w:t> Saa TMr, </w:t>
 <w:i/><w:sz w:val="20"/>	<w:t>kahesa</w:t>
 <w:sz w:val="20"/>	<w:t> Rei Phl, </w:t>
@@ -11251,8 +11253,8 @@
 <w:i/><w:sz w:val="20"/>	<w:t>kaheksa</w:t>
 <w:sz w:val="20"/>	<w:t> Vai Khk Kär Kaa Mär </w:t>
 <w:sz w:val="16"/>	<w:t>spor</w:t>
-<w:sz w:val="20"/>	<w:t> KPõ, I(</w:t><w:t>#NBH#</w:t>
-<w:i/><w:sz w:val="20"/>	<w:t>ä</w:t>
+<w:sz w:val="20"/>	<w:t> KPõ, I(</w:t>
+<w:i/><w:sz w:val="20"/>	<w:t>#NBH#ä</w:t>
 <w:sz w:val="20"/>	<w:t> Kod), </w:t>
 <w:i/><w:sz w:val="20"/>	<w:t>#NBH#ma</w:t>
 <w:sz w:val="20"/>	<w:t> Jõe Kuu Lüg Jäm Mih Tor Hää Vil, </w:t>
@@ -13894,22 +13896,22 @@
 <w:i/><w:sz w:val="20"/>	<w:t>kaih</w:t>
 <w:sz w:val="20"/>	<w:t> VId(g </w:t>
 <w:i/><w:sz w:val="20"/>	<w:t>ka</w:t><w:t>h́</w:t><w:t>|o, </w:t>
-<w:sz w:val="20"/>	<w:t>(</w:t><w:t>#NBH#</w:t>
-<w:i/><w:sz w:val="20"/>	<w:t>u</w:t>
+<w:sz w:val="20"/>	<w:t>(</w:t>
+<w:i/><w:sz w:val="20"/>	<w:t>#NBH#u</w:t>
 <w:sz w:val="20"/>	<w:t>); g </w:t>
 <w:i/><w:sz w:val="20"/>	<w:t>kaiho</w:t>
 <w:sz w:val="20"/>	<w:t> Se); </w:t>
 <w:i/><w:sz w:val="20"/>	<w:t>kaeho</w:t>
-<w:sz w:val="20"/>	<w:t> L(</w:t><w:t>#NBH#</w:t>
-<w:i/><w:sz w:val="20"/>	<w:t>u</w:t>
-<w:sz w:val="20"/>	<w:t>) Võn(</w:t><w:t>#NBH#</w:t>
-<w:i/><w:sz w:val="20"/>	<w:t>h́</w:t><w:t>#NBH#</w:t>
+<w:sz w:val="20"/>	<w:t> L(</w:t>
+<w:i/><w:sz w:val="20"/>	<w:t>#NBH#u</w:t>
+<w:sz w:val="20"/>	<w:t>) Võn(</w:t>
+<w:i/><w:sz w:val="20"/>	<w:t>#NBH#h́#NBH#</w:t>
 <w:sz w:val="20"/>	<w:t>) Räp, </w:t>
 <w:i/><w:sz w:val="20"/>	<w:t>`kaiho</w:t>
 <w:sz w:val="20"/>	<w:t> Vas, </w:t>
 <w:i/><w:sz w:val="20"/>	<w:t>kahu</w:t>
-<w:sz w:val="20"/>	<w:t> Vll Pöi Muh Lä(</w:t><w:t>#NBH#</w:t>
-<w:i/><w:sz w:val="20"/>	<w:t>h́</w:t><w:t>-</w:t>
+<w:sz w:val="20"/>	<w:t> Vll Pöi Muh Lä(</w:t>
+<w:i/><w:sz w:val="20"/>	<w:t>#NBH#h́</w:t><w:t>-</w:t>
 <w:sz w:val="20"/>	<w:t> Mär) Rap, </w:t>
 <w:i/><w:sz w:val="20"/>	<w:t>kaho</w:t>
 <w:sz w:val="20"/>	<w:t> Pöi Lä Ris, </w:t>
@@ -14844,8 +14846,8 @@
 
 <w:rStyle w:val="ms1"/>	<w:t>kahlas</w:t>
 <w:rStyle w:val="ms3"/>	<w:t>1</w:t>
-<w:b/><w:sz w:val="20"/>	<w:t>, </w:t><w:t>#NBH#</w:t>
-<w:rStyle w:val="PoolpaksKiri"/>	<w:t>se</w:t>
+<w:b/><w:sz w:val="20"/>	<w:t>, </w:t>
+<w:rStyle w:val="PoolpaksKiri"/>	<w:t>#NBH#se</w:t>
 <w:sz w:val="20"/>	<w:t> </w:t>
 <w:i/><w:sz w:val="20"/>	<w:t>`kahlas</w:t>
 <w:sz w:val="20"/>	<w:t> Lüg Jõh IisR, </w:t>
@@ -21055,9 +21057,8 @@
 <w:sz w:val="20"/>	<w:t> </w:t>
 <w:i/><w:sz w:val="20"/>	<w:t>`kaitu|s</w:t>
 <w:sz w:val="20"/>	<w:t> g </w:t>
-<w:i/><w:sz w:val="20"/>	<w:t>#NBH#</w:t>
 <w:sz w:val="20"/>	<w:t>(</w:t>
-<w:i/><w:sz w:val="20"/>	<w:t>s</w:t>
+<w:i/><w:sz w:val="20"/>	<w:t>#NBH#s</w:t>
 <w:sz w:val="20"/>	<w:t>)</w:t>
 <w:i/><w:sz w:val="20"/>	<w:t>se</w:t>
 <w:sz w:val="20"/>	<w:t> Lüg Jõh IisR Vai nõmm-liivatee </w:t>
@@ -23890,7 +23891,7 @@
 
 <w:rStyle w:val="ms1"/>	<w:t>kaksama</w:t>
 <w:sz w:val="20"/>	<w:t> </w:t>
-<w:i/><w:sz w:val="20"/>	<w:t>`kaksama, kaksata</w:t>
+<w:i/><w:sz w:val="20"/>	<w:t>`kaksama,kaksata</w:t>
 <w:sz w:val="20"/>	<w:t> KJn T(</w:t><w:t>#NBH#</w:t>
 <w:i/><w:sz w:val="20"/>	<w:t>õm</w:t>
 <w:sz w:val="20"/>	<w:t>(</w:t>
@@ -23906,7 +23907,7 @@
 <w:sz w:val="20"/>	<w:t>(</w:t>
 <w:i/><w:sz w:val="20"/>	<w:t>m</w:t>
 <w:sz w:val="20"/>	<w:t>)</w:t>
-<w:i/><w:sz w:val="20"/>	<w:t>a, kaksada</w:t><w:t>ʔ</w:t>
+<w:i/><w:sz w:val="20"/>	<w:t>a,kaksada</w:t><w:t>ʔ</w:t>
 <w:sz w:val="20"/>	<w:t> (</w:t><w:t>#NBH#</w:t>
 <w:i/><w:sz w:val="20"/>	<w:t>gs</w:t><w:t>#NBH#</w:t>
 <w:sz w:val="20"/>	<w:t>), </w:t>
@@ -26230,8 +26231,7 @@
 <w:i/><w:sz w:val="20"/>	<w:t> </w:t><w:t>#NBH#linõ </w:t>
 <w:sz w:val="20"/>	<w:t>Se, g</w:t>
 <w:i/><w:sz w:val="20"/>	<w:t> </w:t>
-<w:sz w:val="20"/>	<w:t>#NBH#</w:t>
-<w:i/><w:sz w:val="20"/>	<w:t>se </w:t>
+<w:i/><w:sz w:val="20"/>	<w:t>#NBH#se </w:t>
 <w:sz w:val="20"/>	<w:t>kalamees </w:t>
 <w:i/><w:sz w:val="20"/>	<w:t>kalalised `lähväd `püüdämäie</w:t>
 <w:sz w:val="20"/>	<w:t> Lüg; </w:t>
@@ -29107,14 +29107,14 @@
 <w:sz w:val="20"/>	<w:t> Krl</w:t>
 
 <w:rStyle w:val="ms1"/>	<w:t>kalgul</w:t>
-<w:b/><w:sz w:val="20"/>	<w:t>, </w:t><w:t>#NBH#</w:t>
-<w:rStyle w:val="ms4"/>	<w:t>e</w:t>
+<w:b/><w:sz w:val="20"/>	<w:t>, </w:t>
+<w:rStyle w:val="ms4"/>	<w:t>#NBH#e</w:t>
 <w:sz w:val="20"/>	<w:t> </w:t>
 <w:i/><w:sz w:val="20"/>	<w:t>kalgul</w:t>
-<w:sz w:val="20"/>	<w:t>, </w:t><w:t>#NBH#</w:t>
-<w:i/><w:sz w:val="20"/>	<w:t>e</w:t>
-<w:sz w:val="20"/>	<w:t> Mar(</w:t><w:t>#NBH#</w:t>
-<w:i/><w:sz w:val="20"/>	<w:t>o</w:t><w:t>#NBH#</w:t>
+<w:sz w:val="20"/>	<w:t>, </w:t>
+<w:i/><w:sz w:val="20"/>	<w:t>#NBH#e</w:t>
+<w:sz w:val="20"/>	<w:t> Mar(</w:t>
+<w:i/><w:sz w:val="20"/>	<w:t>#NBH#o#NBH#</w:t>
 <w:sz w:val="20"/>	<w:t>) Vig PJg HJn, </w:t>
 <w:i/><w:sz w:val="20"/>	<w:t>kalgole</w:t>
 <w:sz w:val="20"/>	<w:t> Mih kalkvel(e), älevil(e) </w:t>
@@ -29503,8 +29503,8 @@
 <w:rStyle w:val="ms1"/>	<w:t>kalingur</w:t>
 <w:b/>	<w:t> </w:t>
 <w:i/>	<w:t>kalingur </w:t>
-	<w:t>Hlj IisR Pöi Vig Tor JMd JJn Koe Trm KJn Krk, </w:t><w:t>#NBH#</w:t>
-<w:i/>	<w:t>or </w:t>
+	<w:t>Hlj IisR Pöi Vig Tor JMd JJn Koe Trm KJn Krk, </w:t>
+	<w:t>#NBH#</w:t><w:i/>	<w:t>or </w:t>
 	<w:t>VNg Rei Mär Vig Plt Kod KJn</w:t>
 <w:i/>	<w:t>, </w:t><w:t>#NBH#oor Puh Se, - uor </w:t>
 	<w:t>Lüg, </w:t>
@@ -29526,11 +29526,11 @@
 	<w:t> Nõo(</w:t>
 <w:i/>	<w:t>kallin</w:t><w:t>#NBH#</w:t>
 	<w:t>), </w:t>
-<w:i/>	<w:t>#NBH#</w:t><w:t>ĺ</w:t><w:t>l-</w:t>
+<w:i/><w:t>#NBH#</w:t><w:t>ĺ</w:t><w:t>l-</w:t>
 	<w:t> Har, </w:t>
 <w:i/>	<w:t>kalinkuu</w:t><w:t>ŕ</w:t>
-	<w:t> Rõu, g </w:t><w:t>#NBH#</w:t>
-<w:i/>	<w:t>oori</w:t>
+	<w:t> Rõu, g </w:t>
+	<w:t>#NBH#</w:t><w:i/>	<w:t>oori</w:t>
 	<w:t>; </w:t>
 <w:i/>	<w:t>kalenkor </w:t>
 	<w:t>Kod,</w:t>
@@ -31687,8 +31687,8 @@
 <w:rStyle w:val="ms1"/>	<w:t>kallas</w:t>
 <w:sz w:val="20"/>	<w:t> </w:t>
 <w:i/><w:sz w:val="20"/>	<w:t>kallas</w:t>
-<w:sz w:val="20"/>	<w:t> eP(</w:t><w:t>#NBH#</w:t>
-<w:i/><w:sz w:val="20"/>	<w:t>ss</w:t>
+<w:sz w:val="20"/>	<w:t> eP(</w:t>
+<w:i/><w:sz w:val="20"/>	<w:t>#NBH#ss</w:t>
 <w:sz w:val="20"/>	<w:t> Äks), </w:t>
 <w:i/><w:sz w:val="20"/>	<w:t>#NBH#ss, -</w:t><w:t>ś</w:t><w:t>s</w:t>
 <w:sz w:val="20"/>	<w:t> eL, </w:t>
@@ -32653,18 +32653,18 @@
 <w:rStyle w:val="ms3"/>	<w:t>1</w:t>
 <w:sz w:val="20"/>	<w:t> </w:t>
 <w:i/><w:sz w:val="20"/>	<w:t>ka</w:t><w:t>ĺ</w:t><w:t>listama</w:t>
-<w:sz w:val="20"/>	<w:t>(</w:t><w:t>#NBH#</w:t>
-<w:i/><w:sz w:val="20"/>	<w:t>ll</w:t><w:t>#NBH#</w:t>
+<w:sz w:val="20"/>	<w:t>(</w:t>
+<w:i/><w:sz w:val="20"/>	<w:t>#NBH#ll#NBH#</w:t>
 <w:sz w:val="20"/>	<w:t>) </w:t>
 <w:sz w:val="16"/>	<w:t>spor</w:t>
-<w:sz w:val="20"/>	<w:t> eP M(</w:t><w:t>#NBH#</w:t>
-<w:i/><w:sz w:val="20"/>	<w:t>teme</w:t>
-<w:sz w:val="20"/>	<w:t> Hls Krk), Puh Nõo San(</w:t><w:t>#NBH#</w:t>
-<w:i/><w:sz w:val="20"/>	<w:t>teme</w:t>
+<w:sz w:val="20"/>	<w:t> eP M(</w:t>
+<w:i/><w:sz w:val="20"/>	<w:t>#NBH#teme</w:t>
+<w:sz w:val="20"/>	<w:t> Hls Krk), Puh Nõo San(</w:t>
+<w:i/><w:sz w:val="20"/>	<w:t>#NBH#teme</w:t>
 <w:sz w:val="20"/>	<w:t>) Vas, </w:t>
 <w:i/><w:sz w:val="20"/>	<w:t>#NBH#tamma</w:t>
-<w:sz w:val="20"/>	<w:t> Har Plv, </w:t><w:t>#NBH#</w:t>
-<w:i/><w:sz w:val="20"/>	<w:t>tõmõ</w:t>
+<w:sz w:val="20"/>	<w:t> Har Plv, </w:t>
+<w:i/><w:sz w:val="20"/>	<w:t>#NBH#tõmõ</w:t>
 <w:sz w:val="20"/>	<w:t> Krl, </w:t>
 <w:i/><w:sz w:val="20"/>	<w:t>kalistama</w:t>
 <w:sz w:val="20"/>	<w:t> Se, </w:t>
@@ -36584,8 +36584,8 @@
 <w:rStyle w:val="ms1"/>	<w:t>kammits</w:t>
 <w:sz w:val="20"/>	<w:t> </w:t>
 <w:i/><w:sz w:val="20"/>	<w:t>kammits</w:t>
-<w:sz w:val="20"/>	<w:t> eP(</w:t><w:t>#NBH#</w:t>
-<w:i/><w:sz w:val="20"/>	<w:t>m-</w:t>
+<w:sz w:val="20"/>	<w:t> eP(</w:t>
+<w:i/><w:sz w:val="20"/>	<w:t>#NBH#m-</w:t>
 <w:sz w:val="20"/>	<w:t> PJg VJg) eL, </w:t>
 <w:i/><w:sz w:val="20"/>	<w:t>`kammits</w:t>
 <w:sz w:val="20"/>	<w:t> R, g </w:t>
@@ -38575,12 +38575,12 @@
 	<w:t>IisK;</w:t>
 <w:i/>	<w:t> kana kong `t</w:t><w:t>u̬u̬</w:t><w:t>di tuppa, `tihkess varvadess </w:t>
 	<w:t>Kod</w:t>
-<w:b/>	<w:t> </w:t><w:t>#NBH#</w:t>
+<w:b/>	<w:t> </w:t>	<w:t>#NBH#</w:t>
 <w:rStyle w:val="ms4"/>	<w:t>kool</w:t>
 	<w:t> </w:t>
 <w:i/>	<w:t>#NBH#koo</w:t><w:t>ĺ</w:t>
-	<w:t> SJn, </w:t><w:t>#NBH#</w:t>
-<w:i/>	<w:t>k</w:t><w:t>u̬u̬ĺ</w:t><w:t> </w:t>
+	<w:t> SJn, </w:t>
+<w:t>#NBH#</w:t><w:i/>	<w:t>k</w:t><w:t>u̬u̬ĺ</w:t><w:t> </w:t>
 	<w:t>Saa Trv Hls, g </w:t><w:t>#NBH#</w:t>
 <w:i/>	<w:t>kooli</w:t>
 	<w:t>; </w:t>
@@ -38612,10 +38612,10 @@
 <w:rStyle w:val="ms4"/>	<w:t>koole</w:t>
 	<w:t> pl </w:t>
 <w:i/>	<w:t>-`kuolmed </w:t>
-	<w:t>Lüg Jõh IisR(</w:t><w:t>#NBH#</w:t>
-<w:i/>	<w:t>ua</w:t><w:t>#NBH#</w:t>
-	<w:t>) Vai, </w:t><w:t>#NBH#</w:t>
-<w:i/>	<w:t>`k</w:t><w:t>u̬u̬</w:t><w:t>lmed </w:t>
+	<w:t>Lüg Jõh IisR(</w:t>
+	<w:t>#NBH#</w:t><w:i/>	<w:t>ua</w:t><w:t>#NBH#</w:t>
+	<w:t>) Vai, </w:t>
+	<w:t>#NBH#</w:t><w:i/>	<w:t>`k</w:t><w:t>u̬u̬</w:t><w:t>lmed </w:t>
 	<w:t>Äks Puh; </w:t><w:t>#NBH#</w:t>
 <w:i/>	<w:t>kuale,</w:t>
 	<w:t> g -</w:t>
