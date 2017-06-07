@@ -60,7 +60,8 @@ def listiks(alglist):
         else:
         #lisab tühja rea (¤) ja liitsõnade esimese osa enne liitsõnade teist osa    
             try:
-                if "	<w:t>#NBH#</w:t>" in alglist[i+1] or ", </w:t><w:t>#NBH#</w:t>" in alglist[i+1]:
+                if "	<w:t>#NBH#</w:t>" in alglist[i+1] or ", </w:t><w:t>#NBH#</w:t>" in alglist[i+1] or "<w:t> </w:t><w:t>#NBH#</w:t>" in alglist[i+1]:
+#or <w:t> </w:t><w:t>#NBH#</w:t>
                     c.append(j)
                     c.append("¤")
                     c.append(msrida)
@@ -90,7 +91,7 @@ def xmliks(snr, rida):
     while not d[i].startswith("¤"):
       
         if d[i].startswith('<w:rStyle w:val="ms1') or (d[i].startswith('<w:rStyle w:val="PoolpaksKiri"/>') and d[i-1].startswith("¤")):
-            marksona_ise=re.search('(?<=\<w:t\>)\*{,1}[\w|-]+', d[i])
+            marksona_ise=re.search('(?<=\<w:t\>)\*{,1}[\w|\-|\(|\)]+', d[i])
             artikkel = ET.SubElement(snr, "x:A")
             pais = ET.SubElement(artikkel, "x:P")
             ms_grupp = ET.SubElement(pais, "x:mg")
@@ -101,11 +102,11 @@ def xmliks(snr, rida):
                 
             
         #liitsõna lisamine märksõnale
-        elif ("<w:t>|</w:t>" in d[i] or "	<w:t>#NBH#</w:t>" in d[i] or ", </w:t><w:t>#NBH#</w:t>" in d[i]) and marksona.text!="":
+        elif ("<w:t>|</w:t>" in d[i] or "	<w:t>#NBH#</w:t>" in d[i] or ", </w:t><w:t>#NBH#</w:t>" in d[i] or "<w:t> </w:t><w:t>#NBH#</w:t>" in d[i]) and marksona.text!="":
             marksona.text=marksona.text+"|"
             
         elif (d[i].startswith('<w:rStyle w:val="ms2"') or d[i].startswith('<w:rStyle w:val="ms4"')) and marksona.text.endswith("|"):
-            liits=re.search('(?<=\<w:t\>)[\w|\|]+', d[i])
+            liits=re.search('(?<=\<w:t\>)[\w|\||\(|\)]+', d[i])
             marksona.text=marksona.text+liits.group(0)
 
         #atribuutide lisamine märksõnale
@@ -117,7 +118,7 @@ def xmliks(snr, rida):
 
         #märksõnaviite lisamine
         elif '→' in d[i]:
-            msviide=re.search('(?<=\<w:t\>→\<\/w:t\>\<w:t\>)[\w|\s|]+-{0,1}', d[i])
+            msviide=re.search('(?<=\<w:t\>→\<\/w:t\>\<w:t\>)[\w|\s|\-]+-{0,1}', d[i])
             #järgnev tingimus lisatud sest osad märksõnaviited ei ole → märgiga sama real
             #(ja jäävad praegu seega xml-ist välja, kuidas seda lahendada?)
             if not msviide==None:
@@ -136,7 +137,7 @@ def xmliks(snr, rida):
         elif 'Vrd' in d[i] and not '%' in d[i-1]:
             #töötab hetkel kui on ainult üks tähendusviide
             #mitme viite vahel on komad või märgendid, aga kuidas neid ka ikka arvestada saakshetkel jätab esimese tähendusviite ka kommentaari osasse kui neid on rohkem kui üks
-            th_viide=re.search('(?<=\<w:t\>)[\w|\s]+', d[i+1])
+            th_viide=re.search('(?<=\<w:t\>)[\w|\s|\-]+', d[i+1])
             if not th_viide==None:
                 th_viide=(th_viide.group(0)).strip()
                 if not 'sisu' in locals():
@@ -175,7 +176,7 @@ def xmliks(snr, rida):
 
         #artikliviidete lisamine
         elif 'Vrd' in d[i] and '%' in d[i-1]:
-            art_viide=re.search('(?<=\<w:t\>)[\w|\s]+', d[i+1])
+            art_viide=re.search('(?<=\<w:t\>)[\w|\s|\-]+', d[i+1])
             if not art_viide==None:
                 art_viide=(art_viide.group(0)).strip()
                 if not 'sisu' in locals():
@@ -513,4 +514,4 @@ for j,i in enumerate(d): #j on indeks, i on rida
 tree = ET.ElementTree(snr)
 tree.write("ms.xml", encoding="utf8")
 
-#tühjad märgendid kustutasin hiljem käsureal, sest ei saanud ET remove() funktsiooni kasutamisest aru
+#tühjad märgendid kustutasin hiljem käsureal, sest ei saanud ET.remove() funktsiooni kasutamisest aru

@@ -10412,7 +10412,7 @@
 <w:sz w:val="20"/>	<w:t> V(</w:t>
 <w:i/><w:sz w:val="20"/>	<w:t>kahar</w:t>
 <w:sz w:val="20"/>	<w:t> Har Rõu, </w:t>
-<w:i/><w:sz w:val="20"/>	<w:t>kahhar, kaha</w:t><w:t>ŕ</w:t>
+<w:i/><w:sz w:val="20"/>	<w:t>kahhar,kaha</w:t><w:t>ŕ</w:t>
 <w:sz w:val="20"/>	<w:t> Lut), g </w:t>
 <w:i/><w:sz w:val="20"/>	<w:t>kaha|ra</w:t>
 <w:sz w:val="20"/>	<w:t> Plv Se Lut, </w:t>
@@ -10916,7 +10916,7 @@
 <w:sz w:val="20"/>	<w:t> Kod </w:t>
 <w:b/><w:sz w:val="20"/>	<w:t>Vrd</w:t>
 <w:sz w:val="20"/>	<w:t> kahe|keelik, </w:t><w:t>#NBH#kieleline, </w:t><w:t>#NBH#kieline, katekeeleline </w:t>
-<w:b/><w:sz w:val="20"/>	<w:t>-</w:t>
+<w:b/><w:sz w:val="20"/>	<w:t>#NBH#</w:t>
 <w:rStyle w:val="ms4"/>	<w:t>keene</w:t>
 <w:b/><w:sz w:val="20"/>	<w:t>, </w:t><w:t>#NBH#</w:t>
 <w:rStyle w:val="ms4"/>	<w:t>keine</w:t>
@@ -10927,7 +10927,7 @@
 <w:sz w:val="20"/>	<w:t> Kod </w:t>
 <w:b/><w:sz w:val="20"/>	<w:t>Vrd</w:t>
 <w:sz w:val="20"/>	<w:t> kate|keeleline, </w:t><w:t>#NBH#keeline, </w:t><w:t>#NBH#keeruline </w:t>
-<w:b/><w:sz w:val="20"/>	<w:t>-</w:t>
+<w:b/><w:sz w:val="20"/>	<w:t>#NBH#</w:t>
 <w:rStyle w:val="ms4"/>	<w:t>kerru</w:t>
 <w:sz w:val="20"/>	<w:t> </w:t>
 <w:i/><w:sz w:val="20"/>	<w:t>-`kerru</w:t>
@@ -21358,7 +21358,7 @@
 <w:sz w:val="20"/>	<w:t> </w:t>
 <w:i/><w:sz w:val="20"/>	<w:t>kaja|ma</w:t>
 <w:sz w:val="20"/>	<w:t> R([ta] </w:t>
-<w:i/><w:sz w:val="20"/>	<w:t>`kaia, kaja</w:t>
+<w:i/><w:sz w:val="20"/>	<w:t>`kaia,kaja</w:t>
 <w:sz w:val="20"/>	<w:t> Vai) S Mar Mär Khn K, I Puh Nõo, </w:t>
 <w:i/><w:sz w:val="20"/>	<w:t>#NBH#me</w:t>
 <w:sz w:val="20"/>	<w:t> M, </w:t>
