@@ -10899,7 +10899,7 @@
 <w:b/><w:sz w:val="20"/>	<w:t>#NBH#</w:t>
 <w:rStyle w:val="ms4"/>	<w:t>keelik</w:t>
 <w:sz w:val="20"/>	<w:t> kahekeelne – Trm Lai </w:t>
-<w:b/><w:sz w:val="20"/>	<w:t>-</w:t>
+<w:b/><w:sz w:val="20"/>	<w:t>#NBH#</w:t>
 <w:rStyle w:val="ms4"/>	<w:t>keelne</w:t>
 <w:sz w:val="20"/>	<w:t> silmakirjalik, keelepeksja </w:t>
 <w:i/><w:sz w:val="20"/>	<w:t>soo ees on </w:t><w:t>εε</w:t><w:t> inimene, taga`perse jugab nönda et, kahe`keelne inimene</w:t>
