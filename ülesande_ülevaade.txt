@@ -1,0 +1,30 @@
+﻿Murdesõnastiku teisendamine DOC-failist XML-failiks
+
+Eesmärk oli luua skript, mis Wordi dokumendi stiilide järgi koostab murdesõnastiku 8. vihikust sellise XML-faili, mida oleks võimalik importida sõnastike haldussüsteemi EELex.
+
+Tehtud skriptiga said õigesse XML-elementi paigutatud järgmised sõnaartikli osad:
+- märksõna (koos atribuutidega),
+- tähendusnumbrid,
+- näited,
+- näidete kihelkonnad,
+- tähendusviited (koos atribuutidega),
+- artikliviited (koos atribuutidega),
+- märksõnaviited (koos atribuutidega).
+
+Puudu jäid seega kogu tähendusgruppidele eelnev grammatiline info ja osadel sõnadel ka seletus. Iga artikli kogu sisu on aga lisatud data-elementi, mis paigutub EELexis sõnaartikli lõppu, kus on olemas nii see info, mis juba õige elemendi on leidnud, kui ka see, mis jäi õigesse elementi tõstmata.
+
+Tekkinud probleemid ja lahendamata jäänud küsimused:
+
+- osade näidete keskel on sulgudes või kantsulgudes toodud kommentaarid või täpsustused, mis olid näidetest endast erineva kirjastiiliga ja seega algfailis erineval real. Selliste näidete puhul on need näited poolitatud kommentaari koha pealt ja on eraldi elementides;
+- kui mitu näidet järjest olid samast kihelkonnast, siis murdevihikus oli kihelkond märgitud vaid viimase järel. EELexis peaksid need olema samas näitegrupis ja iga näitegrupi puhul on kihelkond kohustuslik. Praeguses tulemusfailis on aga kihelkond samuti ainult viimase näite järel, kusjuures absoluutselt kõik näited on eraldi näitegrupides;
+- tähendus- ja artikliviidete puhul on õigesse elementi paigutunud vaid neist kõige esimene, sest need olid algfailis üksteisest eraldatud liiga paljudel erinevatel viisidel (vahel komaga, vahel tekstimärgenditega, vahel olid need eri ridadel);
+- märksõnaviide ei ole oma elementi läinud üksikutel juhtudel, kui see polnud → märgiga algfailis samal real;
+- skript töötab max 7 tähendusgrupi korral (sest kasutatud algfailis rohkemate tähendusgruppidega sõnaartikleid ei olnud), kusjuures kõik tähendusgruppide ja näidete paigutamine võiks olla skriptis intelligentsemalt kirjutatud, nt mõnda tsüklit kasutades, mida mul ei õnnestunud korrektselt tööle saada. Kui algfailis oleks rohkem kui 7 tähendusgruppi, siis viimase tähendusgrupi näited-tähendusviited läheksid kõik viimase (ehk 7.) tähendusgrupi alla;
+- kuna näited ja grammatika on sarnaselt vormistatud (mõlemad viltuses kirjas, mõlemale järgneb kihelkonnamärgend), siis skript eristab neid selle järgi, et näidetes on tekstimärgendite vahel ka tühikud. Juhul kui ka grammatika puhul on tekstimärgendite vahel tühikud, siis loeb skript ka need näideteks ja sellisel juhul tekib artiklisse kaks nr1 tähendusgruppi. Leitud juhtudel on sellised tühikud algfailis grammatikast eemaldatud, aga kõiki juhte kindlasti parandatud ei ole.
+
+
+Probleemid on toodud välja ka skriptis asjakohastel ridadel. Lisaks on skripti lõpus ära mainitud mõningad parandused, mis sai algfailis käsitsi muudetud, sest neid polnud võimalik koodiga enam mingist muust elemendist eristada ja oleks seega jätnud lõppfaili vead sisse.
+
+Kasutatud algfail: 08.xml.eelex.txt
+Kasutatud skript: ms_teisendus_8_skript.py
+Saadud tulemusfail: ms_teisendus_8_vs.xml
